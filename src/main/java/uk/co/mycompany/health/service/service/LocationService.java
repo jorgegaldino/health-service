@@ -10,18 +10,24 @@ import org.apache.http.util.EntityUtils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import uk.co.mycompany.health.service.entity.HealthPartner;
 import uk.co.mycompany.health.service.entity.Location;
 import uk.co.mycompany.health.service.entity.Location.Distance;
 import uk.co.mycompany.health.service.entity.Location.Element;
 import uk.co.mycompany.health.service.entity.Location.Row;
 
+@Service
 public class LocationService {
-	
-	private static String valueKeyGoogleMaps = "googleTokenId";
+
+	@Value("${distanceMatrixApi.key}")
+	private String valueKeyGoogleMaps;
 
 	
-	public static Long consultarLocalizacao(Double latitude, Double longitude, HealthPartner prestadorSaude) throws Exception {
+	public Long consultarLocalizacao(Double latitude, Double longitude, HealthPartner prestadorSaude) throws Exception {
 		String url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="+ latitude + "," + longitude 
 				+ "&destinations=" + prestadorSaude.getLongitude() +",%20" + prestadorSaude.getLatitude() +"&key=" + valueKeyGoogleMaps;
 		

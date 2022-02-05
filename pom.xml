@@ -5,12 +5,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.1.RELEASE</version>
+		<version>2.6.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>uk.co.mycompany</groupId>
 	<artifactId>health-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>health-service</name>
 	<description>Health Service</description>
 
@@ -44,32 +44,40 @@
 		<dependency>
 		  <groupId>org.modelmapper</groupId>
 		  <artifactId>modelmapper</artifactId>
-		  <version>2.3.0</version>
+		  <version>3.0.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.maps/google-maps-services -->
 		<dependency>
 		    <groupId>com.google.http-client</groupId>
 		    <artifactId>google-http-client</artifactId>
-		    <version>1.23.0</version>
+		    <version>1.41.2</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 		<dependency>
 		    <groupId>com.googlecode.json-simple</groupId>
 		    <artifactId>json-simple</artifactId>
-		    <version>1.1</version>
+		    <version>1.1.1</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.json/json -->
 		<dependency>
 		    <groupId>org.json</groupId>
 		    <artifactId>json</artifactId>
-		    <version>20200518</version>
+		    <version>20211205</version>
 		</dependency>
 				
 		<dependency>
 		    <groupId>org.springdoc</groupId>
 		    <artifactId>springdoc-openapi-ui</artifactId>
-		    <version>1.2.32</version>
+		    <version>1.6.5</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.20</version>
+			<scope>provided</scope>
+		</dependency>
+
 		
 				
 	</dependencies>
