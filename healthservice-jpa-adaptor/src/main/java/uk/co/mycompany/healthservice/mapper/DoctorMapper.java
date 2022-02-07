@@ -15,7 +15,7 @@ public abstract class DoctorMapper {
      * @param doctorModel The Doctor data layer model.
      * @return The Doctor DTO.
      */
-    public DoctorDto toSubscription(DoctorModel doctorModel) {
+    public DoctorDto toDoctorDto(DoctorModel doctorModel) {
         if (doctorModel == null) {
             return null;
         }

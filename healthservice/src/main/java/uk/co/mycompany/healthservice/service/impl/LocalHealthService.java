@@ -10,9 +10,9 @@
 
 package uk.co.mycompany.healthservice.service.impl;
 
-public class HeathLocalService extends AbstractHeathService {
+public class LocalHealthService extends AbstractHeathService {
 
-    public HeathLocalService() {
+    public LocalHealthService() {
 
     }
 }

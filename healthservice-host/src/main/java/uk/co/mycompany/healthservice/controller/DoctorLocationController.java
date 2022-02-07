@@ -67,7 +67,7 @@ public class DoctorLocationController {
 
 		try {
 
-			List<DoctorDto> lista = service.listDoctorsForSpecilty(title);
+			List<DoctorDto> lista = service.listDoctorsByTitle(title);
 
 			if(lista.isEmpty()) {
 				return ResponseEntity.status(HttpStatus.NOT_FOUND).build();

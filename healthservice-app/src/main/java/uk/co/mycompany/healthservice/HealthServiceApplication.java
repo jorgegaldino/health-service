@@ -9,7 +9,10 @@ import org.springframework.context.annotation.PropertySource;
 public class HealthServiceApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(HealthServiceApplication.class, args);
+
 	}
+
 
 }

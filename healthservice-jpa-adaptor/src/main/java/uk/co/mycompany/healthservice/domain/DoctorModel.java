@@ -18,6 +18,8 @@ import java.io.Serializable;
 @Data
 public class DoctorModel implements Serializable {
 
+    private static final long serialVersionUID = -4397106574089376359L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -25,6 +27,8 @@ public class DoctorModel implements Serializable {
     private String name;
 
     private String address;
+
+    private String telephone;
 
     private Double longitude;
 

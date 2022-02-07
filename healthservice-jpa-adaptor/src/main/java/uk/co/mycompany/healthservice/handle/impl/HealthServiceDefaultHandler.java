@@ -7,7 +7,7 @@ import uk.co.mycompany.healthservice.domain.DoctorModel;
 import uk.co.mycompany.healthservice.domain.TitleModel;
 import uk.co.mycompany.healthservice.domain.dto.DoctorDto;
 import uk.co.mycompany.healthservice.exception.HealthServiceException;
-import uk.co.mycompany.healthservice.handle.HeathServiceHandle;
+import uk.co.mycompany.healthservice.handle.HealthServiceHandle;
 import uk.co.mycompany.healthservice.mapper.DoctorMapper;
 import uk.co.mycompany.healthservice.repository.DoctorRepository;
 import uk.co.mycompany.healthservice.repository.DoctorTitleRepository;
@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Component
-public class HealthServiceDefaultHandler implements HeathServiceHandle {
+public class HealthServiceDefaultHandler implements HealthServiceHandle {
 
     @Autowired
     private LocationUtil locationUtil;
@@ -39,20 +39,18 @@ public class HealthServiceDefaultHandler implements HeathServiceHandle {
     public List<DoctorDto> listAll() {
         List<DoctorModel> doctorModelList = doctorRepository.findAll();
 
-        List<DoctorDto> list = doctorModelList.stream().map(
-                doctorMapper::toSubscription).collect(Collectors.toList());
+        return doctorModelList.stream().map(
+                doctorMapper::toDoctorDto).collect(Collectors.toList());
 
-        return list;
     }
 
     @Override
-    public List<DoctorDto> listForTitle(String title) {
+    public List<DoctorDto> listByTitle(String title) {
         List<DoctorModel> doctorModelList = doctorRepository.findByTitle(title);
 
-        List<DoctorDto> list = doctorModelList.stream().map(
-                doctorMapper::toSubscription).collect(Collectors.toList());
+        return doctorModelList.stream().map(
+                doctorMapper::toDoctorDto).collect(Collectors.toList());
 
-        return list;
     }
 
     @Override
@@ -60,14 +58,12 @@ public class HealthServiceDefaultHandler implements HeathServiceHandle {
             throws HealthServiceException {
         List<DoctorModel> doctorModelList = doctorRepository.findByTitle(title);
 
-        List<DoctorDto> list = doctorModelList.stream().map(doctorModel -> {
-            DoctorDto doctorDto = doctorMapper.toSubscription(doctorModel);
+        return doctorModelList.stream().map(doctorModel -> {
+            DoctorDto doctorDto = doctorMapper.toDoctorDto(doctorModel);
             Double distance = locationUtil.calcDistance(latitude, longitude, doctorModel);
             doctorDto.setDistance(distance);
             return doctorDto;}).sorted(Comparator.comparingDouble(DoctorDto::getDistance))
                 .collect(Collectors.toList());
-
-        return list;
     }
 
     @Override
@@ -82,14 +78,12 @@ public class HealthServiceDefaultHandler implements HeathServiceHandle {
             doctorModelList = doctorRepository.findByTitle(title);
         }
 
-        List<DoctorDto> list = doctorModelList.stream().map(doctorModel -> {
-            DoctorDto doctorDto = doctorMapper.toSubscription(doctorModel);
+        return doctorModelList.stream().map(doctorModel -> {
+            DoctorDto doctorDto = doctorMapper.toDoctorDto(doctorModel);
             Double distance = locationUtil.calcDistance(address, doctorModel);
             doctorDto.setDistance(distance);
             return doctorDto;}).sorted(Comparator.comparingDouble(DoctorDto::getDistance))
                 .collect(Collectors.toList());
-
-        return list;
     }
 
     @Override
