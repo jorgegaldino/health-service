@@ -6,14 +6,14 @@ import java.util.List;
 
 public interface HealthService {
 
-    public List<DoctorDto> listAllDoctors();
+    List<DoctorDto> listAllDoctors();
 
-    public List<DoctorDto> listDoctorsForSpecilty(String specialty);
+    List<DoctorDto> listDoctorsByTitle(String specialty);
 
-    public List<DoctorDto> listDoctorsByTitleAndLocation(String title, Double latitude, Double longitude);
+    List<DoctorDto> listDoctorsByTitleAndLocation(String title, Double latitude, Double longitude);
 
-    public List<DoctorDto> listDoctorsByTitleAndLocation(String title, String address);
+    List<DoctorDto> listDoctorsByTitleAndLocation(String title, String address);
 
-    public List<String> listAllDoctorsTitles();
+    List<String> listAllDoctorsTitles();
 
 }

@@ -1,0 +1,7 @@
+uk\co\mycompany\healthservice\domain\dto\DoctorDto.class
+uk\co\mycompany\healthservice\strategy\HealthServiceStrategy.class
+uk\co\mycompany\healthservice\service\impl\AbstractHeathService.class
+uk\co\mycompany\healthservice\service\HealthService.class
+uk\co\mycompany\healthservice\handle\HealthServiceHandle.class
+uk\co\mycompany\healthservice\exception\HealthServiceException.class
+uk\co\mycompany\healthservice\service\impl\LocalHealthService.class

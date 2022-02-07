@@ -1,0 +1,10 @@
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\domain\TitleModel.java
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\repository\DoctorRepository.java
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\entity\Location.java
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\mapper\DoctorMapper.java
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\configuration\HeathDbConfig.java
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\strategy\impl\HealthServiceDefaultStrategy.java
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\util\LocationUtil.java
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\handle\impl\HealthServiceDefaultHandler.java
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\domain\DoctorModel.java
+C:\java\git\project-health\health-service\healthservice-jpa-adaptor\src\main\java\uk\co\mycompany\healthservice\repository\DoctorTitleRepository.java

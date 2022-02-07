@@ -1,0 +1,4 @@
+uk\co\mycompany\healthservice\controller\DoctorTitleController.class
+uk\co\mycompany\healthservice\configuration\CorsFilter.class
+uk\co\mycompany\healthservice\configuration\SwaggerConfig.class
+uk\co\mycompany\healthservice\controller\DoctorLocationController.class

@@ -1,0 +1,16 @@
+uk\co\mycompany\healthservice\mapper\DoctorMapperImpl.class
+uk\co\mycompany\healthservice\domain\TitleModel.class
+uk\co\mycompany\healthservice\entity\Location$TextValue.class
+uk\co\mycompany\healthservice\mapper\DoctorMapper.class
+uk\co\mycompany\healthservice\repository\DoctorRepository.class
+uk\co\mycompany\healthservice\handle\impl\HealthServiceDefaultHandler.class
+uk\co\mycompany\healthservice\entity\Location.class
+uk\co\mycompany\healthservice\entity\Location$Distance.class
+uk\co\mycompany\healthservice\configuration\HeathDbConfig.class
+uk\co\mycompany\healthservice\repository\DoctorTitleRepository.class
+uk\co\mycompany\healthservice\entity\Location$Duration.class
+uk\co\mycompany\healthservice\entity\Location$Element.class
+uk\co\mycompany\healthservice\util\LocationUtil.class
+uk\co\mycompany\healthservice\domain\DoctorModel.class
+uk\co\mycompany\healthservice\entity\Location$Row.class
+uk\co\mycompany\healthservice\strategy\impl\HealthServiceDefaultStrategy.class
