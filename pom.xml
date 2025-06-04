@@ -10,11 +10,6 @@
 	<name>health-service</name>
 	<description>Health Service</description>
 
-	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
-
 	<modules>
 		<module>healthservice</module>
 		<module>healthservice-jpa-adaptor</module>
